@@ -1,0 +1,67 @@
+/* :root - To define our global variables or custom properties */
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 
+    1. Pixels are absolute units, they are not flexible. 
+        If the user changes the default font-size in their browser,
+        our webpage is not going to reflect that change. So,instead
+        of px we use rem units.
+    2. 1rem = One times the font size of our html element defined in
+        html {}.
+    3. By default browsers default font size is medium. i.e 16px
+*/
+html {
+  /* 
+    62.5% of 16px = 10px
+    font-size: 1rem; means 10px 
+  */
+  font-size: 62.5%; /* To make calucation easy.*/
+}
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5; /* 1.5 times the current font-size(62.5%) */
+  color: var(--color-body);
+}
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 7rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+p {
+  margin-top: 0;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+}
